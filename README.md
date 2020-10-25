@@ -702,7 +702,7 @@ To create a datalist, we need to use the input element with the `list` attribute
 
 ```HTML
 <form>
-  <label for=datalist>A datalist:</label>
+  <label for="datalist">A datalist:</label>
   <input id="datalist_example" type="text" name="example" list="some_choices"/>
   <datalist id="some_choices">
     <option value="A choice"></option>
