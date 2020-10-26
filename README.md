@@ -1,7 +1,7 @@
 # An Introduction to HTML
 *A compact introduction to using HTML.*
 
-HTML stands for HyperText Markup Language. As its name suggests, it's a [markup language](https://en.wikipedia.org/wiki/Markup_language), i.e. a language which defines the structure and presentation of raw text. As such, no prior programming knowledge is required.
+HyperText Markup Language (HTML) is a [markup language](https://en.wikipedia.org/wiki/Markup_language), i.e. a language which defines the structure and presentation of raw text. As such, no prior programming knowledge is required.
 
 HTML is the standard markup language to use for creating websites and is typically layered under CSS and JavaScript, since HTML alone is only useful as the foundational building blocks of a website.
 
