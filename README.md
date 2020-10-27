@@ -586,7 +586,7 @@ If we wish to restrict the character count of the allowed input, then we can add
 </form>
 ```
 
-We can also restrict the permissible character set by adding the `pattern` attribute to the input element. The value should be a [regular expression](https://en.wikipedia.org/wiki/Regular_expression), or regex. Modifying the first example above to only allow letters and numbers:
+We can also restrict the permissible character set by adding the `pattern` attribute to the input element, whose value should be a [regular expression](https://github.com/cnguyen-uk/An-Introduction-to-Regex). Modifying the first example above to only allow letters and numbers:
 
 ```HTML
 <form>
