@@ -104,6 +104,8 @@ HTML is composed of *elements* which structure the webpage and define its conten
 <p>Hello World!</p>
 ```
 
+The first character or word in the opening tag is called the *tag name*. In the above example, the tag name is `p`.
+
 ### The Head Element
 
 The first element in the HTML element should be the *head element*, which contains the metadata for a webpage, i.e. information about the webpage which isn't directly displayed on the webpage itself.
