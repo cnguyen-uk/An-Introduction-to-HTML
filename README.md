@@ -5,7 +5,7 @@ HyperText Markup Language (HTML) is a [markup language](https://en.wikipedia.org
 
 HTML is the standard markup language to use for creating websites and is typically layered under CSS and JavaScript, since HTML alone is only useful as the foundational building blocks of a website.
 
-The aim of this guide is to present HTML in a compact way, as necessary to begin building a functional website. For an extremely comprehensive guide, see [the HTML Living Standard](https://html.spec.whatwg.org/multipage/).
+The aim of this guide is to present HTML in a compact way, as necessary to begin building a functional website. For an extremely comprehensive guide, see [the HTML Living Standard](https://html.spec.whatwg.org/multipage/) or [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/HTML).
 
 ## Table of Contents
 
