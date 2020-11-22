@@ -19,7 +19,7 @@ The aim of this guide is to present HTML in a compact way, as necessary to begin
   * [The Hierarchy Structure](#the-hierarchy-structure)
   * [Headings](#headings)
   * [Attributes](#attributes)
-  * [The `id` Attribute](#the-id-attribute)
+  * [The `id` and `class` Attributes](#the-id-and-class-attributes)
   * [The Div Element](#the-div-element)
   * [Displaying Text](#displaying-text)
   * [Styling Text](#styling-text)
@@ -171,13 +171,11 @@ An element can be enriched by adding an *attribute* to the element's opening tag
 
 Throughout this guide we'll see several examples of attributes and their uses, but a good list can be found [here](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes).
 
-### The `id` Attribute
+### The `id` and `class` Attributes
 
-The `id` attribute can be added to any element. Typically this is done to add more context to the raw code for readability reasons, or to be called upon later by other HTML, CSS or JavaScript code. The value of an `id` attribute must be unique across the entire code, and should only contain the ASCII letters, underscores, hyphens, and periods.
+The `id` and `class` attributes can be added to any element. Typically this is done to add more context to the raw code for readability reasons. Additionally, the value of an `id` attribute may be called upon later by other HTML, CSS or JavaScript code; and the value of a `class` attribute may be called upon later by other CSS or JavaScript code.
 
-### The `class` Attribute
-
-The `class` attribute can be added to any element and  is similar to the `id` attribute. It is typically used to add more context to the raw code, or to be called upon later by other CSS or JavaScript. In particular, the value of a `class` attribute does not need to be unique across the entire code, and should only contain the ASCII letters, underscores, hyphens, and periods.
+The value of an `id` attribute must be unique across the entire code, whereas the value of a `class` attribute does not. In particular, the value of an `id` or `class` attribute should only contain the ASCII letters, underscores, hyphens, and periods. However, words in ID and class names should be separated by a hyphen - see the [Code Readability and Standards](#code-readability-and-standards) section.
 
 ### The Div Element
 
