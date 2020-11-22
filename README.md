@@ -11,7 +11,7 @@ The aim of this guide is to present HTML in a compact way, as necessary to begin
 
 - [Elements and Structure](#elements-and-structure)
   * [Document Set Up](#document-set-up)
-  * [Code Readability](#code-readability)
+  * [Code Readability and Standards](#code-readability-and-standards)
   * [Comments](#comments)
   * [Elements](#elements)
   * [The Head Element](#the-head-element)
@@ -84,9 +84,11 @@ The rest of the HTML code needs to exist within the `<html>` tag (defined in the
 </html>
 ```
 
-### Code Readability
+### Code Readability and Standards
 
 In HTML line breaks and indentation do not affect the displayed output, but should still be used appropriately to make the code easier to read. The standard is to use two spaces for indented code. Readability will be covered in greater detail in the [Semantic HTML](#semantic-html) section, but we will still follow best practices throughout this guide.
+
+Moreover, we follow the standards in the [Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.html). In particular, we wrap attribute values in double quotes `" "`, as opposed to single quotes `' '`, but either will work. We also separate ID and class names with a hypen `-`, rather than an underscore `_`.
 
 ### Comments
 
@@ -164,7 +166,7 @@ Typically `<h1>` tags are used for main headings, and the smaller headings used 
 An element can be enriched by adding an *attribute* to the element's opening tag. Attributes consists of a *name* and a *value*. The generic syntax is as follows:
 
 ```HTML
-<tag_name attribute_name="attribute_value">Content</tag_name>
+<tag-name attribute-name="attribute-value">Content</tag-name>
 ```
 
 Throughout this guide we'll see several examples of attributes and their uses, but a good list can be found [here](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes).
@@ -172,6 +174,10 @@ Throughout this guide we'll see several examples of attributes and their uses, b
 ### The `id` Attribute
 
 The `id` attribute can be added to any element. Typically this is done to add more context to the raw code for readability reasons, or to be called upon later by other HTML, CSS or JavaScript code. The value of an `id` attribute must be unique across the entire code, and should only contain the ASCII letters, underscores, hyphens, and periods.
+
+### The `class` Attribute
+
+The `class` attribute can be added to any element and  is similar to the `id` attribute. It is typically used to add more context to the raw code, or to be called upon later by other CSS or JavaScript. In particular, the value of a `class` attribute does not need to be unique across the entire code, and should only contain the ASCII letters, underscores, hyphens, and periods.
 
 ### The Div Element
 
@@ -269,7 +275,7 @@ Note that the `<ul>` and `<ol>` elements should not hold raw text outside of an 
 Media can be grouped into three main types: images, videos, and audio. It is possible to use the `<embed>` self-closing tag to include any type of media in a webpage. This should be used with the `src` attribute to include the URL of the media.
 
 ```HTML
-<embed src="some_url"/>
+<embed src="some-url"/>
 ```
 
 However, using this tag should be avoided since it is a deprecated tag, but will often be seen in legacy code. Instead, the `<img>`, `<video>` and `<audio>` tags should be used instead, and these will be detailed in the upcoming sections.
@@ -279,13 +285,13 @@ However, using this tag should be avoided since it is a deprecated tag, but will
 The `<img>` tag is a self-closing tag which allows images to be added. The `src` attribute must be included in the tag, where its value is the URL of the image.
 
 ```HTML
-<img src="some_url"/>
+<img src="some-url"/>
 ```
 
 For screen readers to correctly describe images, we should also include alternative text via the `alt` attribute, where the value is a description of the image. Additionally, alternative text is useful in the case that the image fails to load; and to aid web crawlers for the purpose of improving a website's [SEO](https://en.wikipedia.org/wiki/Search_engine_optimization) ranking.
 
 ```HTML
-<img src="some_url" alt="A nice image."/>
+<img src="some-url" alt="A nice image."/>
 ```
 
 #### Videos
@@ -295,8 +301,8 @@ To add video we can use the `<video>` tag. Similar to the `<img>` tag, we need t
 Useful attributes to include are the `controls` attribute, to include basic video controls, and the `width` and `height` attributes, to determine the video's display size. It is also typical to include content in the video element, which will only be displayed if the browser is unable to load the video. We should also include the `type` attribute to help the browser identify the video type more easily, and if it can support it.
 
 ```HTML
-<video src="some_url" type="video/mp4" width="320" height="240" controls>
-Your browser does not support this video. <a href="another_url">Here</a> is another link to the video instead.
+<video src="some-url" type="video/mp4" width="320" height="240" controls>
+Your browser does not support this video. <a href="another-url">Here</a> is another link to the video instead.
 </video>
 ```
 
@@ -304,9 +310,9 @@ Not all browsers will support the same video formats, so we can use the source e
 
 ```HTML
 <video width="320" height="240" controls>
-  <source src="some_url" type="video/mp4"/>
-  <source src="another_url" type="video/webm"/>
-Your browser does not support this video. <a href="different_url">Here</a> is another link to the video instead.
+  <source src="some-url" type="video/mp4"/>
+  <source src="another-url" type="video/webm"/>
+Your browser does not support this video. <a href="different-url">Here</a> is another link to the video instead.
 </video>
 ```
 
@@ -319,8 +325,8 @@ To add audio we can use the `<audio>` tag. This is similar to the `<video>` tag 
 A useful attribute to include is the `controls` attribute, to include basic audio controls. We should also include the `type` attribute to help the browser identify the audio type more easily, and if it can support it.
 
 ```HTML
-<audio src="some_url" type="audio/mpeg" controls>
-Your browser does not support this audio. <a href="different_url">Here</a> is another link to the audio instead.
+<audio src="some-url" type="audio/mpeg" controls>
+Your browser does not support this audio. <a href="different-url">Here</a> is another link to the audio instead.
 </audio>
 ```
 
@@ -328,9 +334,9 @@ Not all browsers will support the same file types and audio codecs, so we can us
 
 ```HTML
 <audio controls>
-  <source src="some_url" type="audio/mpeg"/>
-  <source src="another_url" type="audio/ogg"/>
-Your browser does not support this audio. <a href="different_url">Here</a> is another link to the audio instead.
+  <source src="some-url" type="audio/mpeg"/>
+  <source src="another-url" type="audio/ogg"/>
+Your browser does not support this audio. <a href="different-url">Here</a> is another link to the audio instead.
 </audio>
 ```
 
@@ -341,13 +347,13 @@ Other useful attributes are `autoplay`, to add autoplay functionality, and `loop
 To add links we can use the *anchor element*, with the text of the link as the content, and the URL of the link as the value of the `href` attribute. Note that the content of the anchor element need not be text - it could also be an image, a video, or audio.
 
 ```HTML
-<a href="some_url">This is the text of the link</a>
+<a href="some-url">This is the text of the link</a>
 ```
 
 If we want the link to open in a new tab, then we can use the `target` attribute with a value of `_blank`. Adding to the above example:
 
 ```HTML
-<a href="some_url" target="_blank">This is the text of the link</a>
+<a href="some-url" target="_blank">This is the text of the link</a>
 ```
 
 If we wish to link to a part of the webpage itself, then we can use the `id` attribute at our target location. The following example demonstrates this (notice the `#` used in the value of the `href` attribute):
@@ -525,7 +531,7 @@ In this section we'll look at six different inputs. All of these input types wil
 
 ```HTML
 <form>
-  <input type="some_type" name="some_name"/>
+  <input type="some-type" name="some-name"/>
 </form>
 ```
 
@@ -533,7 +539,7 @@ Most input types are also compatible with the `value` attribute, which allows fo
 
 ```HTML
 <form>
-  <input type="some_type" name="some_name" value="some_value"/>
+  <input type="some-type" name="some-name" value="some-value"/>
 </form>
 ```
 
@@ -543,8 +549,8 @@ We can attach a *label element* to an input element to inform the user on what t
 
 ```HTML
 <form>
-  <label for="an_id">Enter some data</label>
-  <input id="an_id" type="some_type" name="some_name"/>
+  <label for="an-id">Enter some data</label>
+  <input id="an-id" type="some-type" name="some-name"/>
 </form>
 ```
 
@@ -554,8 +560,8 @@ We can force certain inputs in a form to be mandatory by adding the `required` a
 
 ```HTML
 <form>
-  <label for="an_id">Enter some data</label>
-  <input id="an_id" type="some_type" name="some_name" required/>
+  <label for="an-id">Enter some data</label>
+  <input id="an-id" type="some-type" name="some-name" required/>
 </form>
 ```
 
@@ -565,8 +571,8 @@ To specify that an input element should accept text, we can set the value of its
 
 ```HTML
 <form>
-  <label for="text_example">Enter some text:</label>
-  <input id="text_example" type="text" name="text_field"/>
+  <label for="text-example">Enter some text:</label>
+  <input id="text-example" type="text" name="text-field"/>
 </form>
 ```
 
@@ -574,8 +580,8 @@ Alternatively, it is possible to create a larger text field by using the textare
 
 ```HTML
 <form>
-  <label for="textarea_example">Enter a lot of text:</label>
-  <textarea id="textarea_example" name="textarea_field" rows="5" cols="20">Some default text.</textarea>
+  <label for="textarea-example">Enter a lot of text:</label>
+  <textarea id="textarea-example" name="textarea-field" rows="5" cols="20">Some default text.</textarea>
 </form>
 ```
 
@@ -583,8 +589,8 @@ If we wish to restrict the character count of the allowed input, then we can add
 
 ```HTML
 <form>
-  <label for="text_example">Enter some text between 10 and 200 characters:</label>
-  <input id="text_example" type="text" name="text_field" minlength="10" maxlength="200"/>
+  <label for="text-example">Enter some text between 10 and 200 characters:</label>
+  <input id="text-example" type="text" name="text-field" minlength="10" maxlength="200"/>
 </form>
 ```
 
@@ -592,8 +598,8 @@ We can also restrict the permissible character set by adding the `pattern` attri
 
 ```HTML
 <form>
-  <label for="text_example">Enter some text:</label>
-  <input id="text_example" type="text" name="text_field" pattern="[a-zA-Z0-9]+"/>
+  <label for="text-example">Enter some text:</label>
+  <input id="text-example" type="text" name="text-field" pattern="[a-zA-Z0-9]+"/>
 </form>
 ```
 
@@ -603,8 +609,8 @@ If a user is to input their password, then the characters of the password should
 
 ```HTML
 <form>
-  <label for="password_example">Password</label>
-  <input id="password_example" type="password" name="password_field"/>
+  <label for="password-example">Password</label>
+  <input id="password-example" type="password" name="password-field"/>
 </form>
 ```
 
@@ -616,8 +622,8 @@ To specify that an input element should only accept numbers (and a few special c
 
 ```HTML
 <form>
-  <label for="number_example">Shoe size</label>
-  <input id="number_example" type="number" name="number_field" step="0.5"/>
+  <label for="number-example">Shoe size</label>
+  <input id="number-example" type="number" name="number-field" step="0.5"/>
 </form>
 ```
 
@@ -625,8 +631,8 @@ If we wish to restrict the range of the allowed input, then we can add either, o
 
 ```HTML
 <form>
-  <label for="number_example">Shoe size</label>
-  <input id="number_example" type="number" name="number_field" step="0.5" min="0" max="12"/>
+  <label for="number-example">Shoe size</label>
+  <input id="number-example" type="number" name="number-field" step="0.5" min="0" max="12"/>
 </form>
 ```
 
@@ -636,8 +642,8 @@ To obtain user input via a slider, we can use an input element with a `type` att
 
 ```HTML
 <form>
-  <label for="range_example">Volume Control</label>
-  <input id="range_example" type="range" name="slider" min="1" max="100" step="1"/>
+  <label for="range-example">Volume Control</label>
+  <input id="range-example" type="range" name="slider" min="1" max="100" step="1"/>
 </form>
 ```
 
@@ -685,8 +691,8 @@ Dropdown lists are a useful alternative to checkboxes and radio buttons, especia
 
 ```HTML
 <form>
-  <label for="dropdown_list">A dropdown list:</label>
-  <select id="dropdown_list" name="dropdown">
+  <label for="dropdown-list">A dropdown list:</label>
+  <select id="dropdown-list" name="dropdown">
     <option value="a choice">A choice</option>
     <option value="another choice">Another choice</option>
     <option value="one more choice">One more choice</option>
@@ -705,8 +711,8 @@ To create a datalist, we need to use the input element with the `list` attribute
 ```HTML
 <form>
   <label for="datalist">A datalist:</label>
-  <input id="datalist_example" type="text" name="example" list="some_choices"/>
-  <datalist id="some_choices">
+  <input id="datalist-example" type="text" name="example" list="some-choices"/>
+  <datalist id="some-choices">
     <option value="A choice"></option>
     <option value="Another choice"></option>
     <option value="One more choice"></option>
@@ -865,7 +871,7 @@ The figure element is used to contain any figures, such as images, illustrations
 
 ```HTML
 <figure>
-  <img src="some_url" alt="A nice image."/>
+  <img src="some-url" alt="A nice image."/>
   <figcaption>Figure 1: This figure shows how nice images can be.</figcaption>
 </figure>
 ```
