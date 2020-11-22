@@ -88,11 +88,11 @@ The rest of the HTML code needs to exist within the `<html>` tag (defined in the
 
 In HTML line breaks and indentation do not affect the displayed output, but should still be used appropriately to make the code easier to read. The standard is to use two spaces for indented code. Readability will be covered in greater detail in the [Semantic HTML](#semantic-html) section, but we will still follow best practices throughout this guide.
 
-Moreover, we follow the standards in the [Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.html). In particular, we wrap attribute values in double quotes `" "`, as opposed to single quotes `' '`, but either will work. We also separate ID and class names with a hypen `-`, rather than an underscore `_`.
+Moreover, we follow the standards in the [Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.html). In particular, we wrap attribute values in double quotes `" "`, as opposed to single quotes `' '`, but either will work. We also separate ID and class names with a hyphen `-`, rather than an underscore `_`.
 
 ### Comments
 
-It can be useful to add comments to our code to help provide more context on what the code does, or to temporarily disable code without having to actually delete it. Comments being with `<!--` and end with `-->` and do not actually display in the webpage output.
+It can be useful to add comments to our code to help provide more context on what the code does, or to temporarily disable code without having to actually delete it. Comments begin with `<!--` and end with `-->` and do not actually display in the webpage output.
 
 ```HTML
 <!-- This is a comment. -->
