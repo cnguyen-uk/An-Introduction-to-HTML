@@ -88,7 +88,7 @@ Attribute values need to be wrapped in quotation marks. These should be double q
 
 ### Naming
 
-If words in ID and class names require separation, then it should be done using *kebab-case*, i.e. with a hyphen `-`, rather than an underscore `_`.
+All code, and by extension names, should be in lowercase (with the exception of strings). In particular, ID and class names should be written in *kebab-case*, i.e. any word separation should be done with a hyphen `-`.
 
 ## Elements and Structure
 
