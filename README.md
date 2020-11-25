@@ -9,10 +9,13 @@ The aim of this guide is to present HTML in a compact way, as necessary to begin
 
 ## Table of Contents
 
+- [Coding Standards](#coding-standards)
+  * [Indentation](#indentation)
+  * [Commenting](#commenting)
+  * [Quotes](#quotes)
+  * [Naming](#naming)
 - [Elements and Structure](#elements-and-structure)
   * [Document Set Up](#document-set-up)
-  * [Code Readability and Standards](#code-readability-and-standards)
-  * [Comments](#comments)
   * [Elements](#elements)
   * [The Head Element](#the-head-element)
   * [The Body Element](#the-body-element)
@@ -61,6 +64,32 @@ The aim of this guide is to present HTML in a compact way, as necessary to begin
   * [The Aside Element](#the-aside-element)
   * [The Figure and Figure Caption Elements](#the-figure-and-figure-caption-elements)
 
+## Coding Standards
+
+All written code should follow a style guide to ensure that standards are kept consistent across any codebase and make code easier to read. Badly written code is difficult to scale, optimise, and debug. Such is the importance of high coding standards that this guide will discuss it as a separate section before any code is seen.
+
+We follow the standards in the [Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.html). In particular, this section will act as a reference for language-specific best practices for indentation, commenting, quotes, and naming, since these can vary across different programming languages. Readability will be covered in greater detail in the [Semantic HTML](#semantic-html) section.
+
+### Indentation
+
+Line breaks and indentation do not affect the displayed output, but should still be used appropriately to make the code easier to read. The standard is to use two spaces for indented code.
+
+### Commenting
+
+It can be useful to add comments to our code to help provide more context on what the code does, or to temporarily disable code without having to actually delete it. Comments begin with `<!--` and end with `-->`, and do not actually display in the webpage output. For readability, comments should be written in complete sentences, be indented with the code which it is commenting, and come before the code which it is commenting. Placing the comment after is merciless on a confused reader.
+
+```HTML
+<!-- This is a comment. -->
+```
+
+### Quotes
+
+Attribute values need to be wrapped in quotation marks. These should be double quotes `" "`, rather than single quotes `' '`, but functionally either will work.
+
+### Naming
+
+If words in ID and class names require separation, then it should be done using *kebab-case*, i.e. with a hyphen `-`, rather than an underscore `_`.
+
 ## Elements and Structure
 
 A standard HTML document should be structured in a certain way so that it can be displayed correctly as a webpage; is properly read by [web crawlers](https://en.wikipedia.org/wiki/Web_crawler); and can be easily understood by other people reading the code.
@@ -82,20 +111,6 @@ The rest of the HTML code needs to exist within the `<html>` tag (defined in the
 <html>
   ...
 </html>
-```
-
-### Code Readability and Standards
-
-In HTML line breaks and indentation do not affect the displayed output, but should still be used appropriately to make the code easier to read. The standard is to use two spaces for indented code. Readability will be covered in greater detail in the [Semantic HTML](#semantic-html) section, but we will still follow best practices throughout this guide.
-
-Moreover, we follow the standards in the [Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.html). In particular, we wrap attribute values in double quotes `" "`, as opposed to single quotes `' '`, but either will work. We also separate ID and class names with a hyphen `-`, rather than an underscore `_`.
-
-### Comments
-
-It can be useful to add comments to our code to help provide more context on what the code does, or to temporarily disable code without having to actually delete it. Comments begin with `<!--` and end with `-->` and do not actually display in the webpage output.
-
-```HTML
-<!-- This is a comment. -->
 ```
 
 ### Elements
@@ -175,7 +190,7 @@ Throughout this guide we'll see several examples of attributes and their uses, b
 
 The `id` and `class` attributes can be added to any element. Typically this is done to add more context to the raw code for readability reasons. Additionally, the value of an `id` attribute may be called upon later by other HTML, CSS or JavaScript code; and the value of a `class` attribute may be called upon later by other CSS or JavaScript code.
 
-The value of an `id` attribute must be unique across the entire code, whereas the value of a `class` attribute does not. In particular, the value of an `id` or `class` attribute should only contain the ASCII letters, underscores, hyphens, and periods. However, words in ID and class names should be separated by a hyphen - see the [Code Readability and Standards](#code-readability-and-standards) section.
+The value of an `id` attribute must be unique across the entire code, whereas the value of a `class` attribute does not. In particular, the value of an `id` or `class` attribute should only contain the ASCII letters, underscores, hyphens, and periods. However, words in ID and class names should be separated by a hyphen - see the [Naming](#naming) section.
 
 ### The Div Element
 
