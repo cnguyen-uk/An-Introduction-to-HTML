@@ -11,9 +11,9 @@ The aim of this guide is to present HTML in a compact way, as necessary to begin
 
 - [Coding Standards](#coding-standards)
   * [Indentation](#indentation)
-  * [Commenting](#commenting)
+  * [Comments](#comments)
   * [Quotes](#quotes)
-  * [Naming](#naming)
+  * [Names](#names)
 - [Elements and Structure](#elements-and-structure)
   * [Document Set Up](#document-set-up)
   * [Elements](#elements)
@@ -68,13 +68,13 @@ The aim of this guide is to present HTML in a compact way, as necessary to begin
 
 All written code should follow a style guide to ensure that standards are kept consistent across any codebase and make code easier to read. Badly written code is difficult to scale, optimise, and debug. Such is the importance of high coding standards that this guide will discuss it as a separate section before any code is seen.
 
-We follow the standards in the [Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.html). In particular, this section will act as a reference for language-specific best practices for indentation, commenting, quotes, and naming, since these can vary across different programming languages. Readability will be covered in greater detail in the [Semantic HTML](#semantic-html) section.
+We follow the standards in the [Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.html). In particular, this section will act as a reference for language-specific best practices for indentation, comments, quotes, and names, since these can vary across different programming languages. Readability will be covered in greater detail in the [Semantic HTML](#semantic-html) section.
 
 ### Indentation
 
 Line breaks and indentation do not affect the displayed output, but should still be used appropriately to make the code easier to read. The standard is to use two spaces for indented code.
 
-### Commenting
+### Comments
 
 It can be useful to add comments to our code to help provide more context on what the code does, or to temporarily disable code without having to actually delete it. Comments begin with `<!--` and end with `-->`; can be multi-line; and do not actually display in the webpage output. There is no way to do inline comments (i.e. comments within other HTML elements).
 
@@ -88,7 +88,7 @@ For readability, comments should be written in complete sentences, be indented w
 
 Attribute values need to be wrapped in quotation marks. These should be double quotes `" "`, rather than single quotes `' '`, but functionally either will work.
 
-### Naming
+### Names
 
 All code, and by extension names, should be in lowercase (with the exception of strings). In particular, ID and class names should be written in *kebab-case*, i.e. any word separation should be done with a hyphen `-`.
 
