@@ -84,6 +84,13 @@ For readability, comments should be written in complete sentences, be indented w
 <!-- This is a comment. -->
 ```
 
+```HTML
+<!-- This is a comment that will span multiple lines.  This is another sentence.
+
+This is the end of the comment.
+-->
+```
+
 ### Quotes
 
 Attribute values need to be wrapped in quotation marks. These should be double quotes `" "`, rather than single quotes `' '`, but functionally either will work.
